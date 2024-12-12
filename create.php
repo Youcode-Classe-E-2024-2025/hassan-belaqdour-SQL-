@@ -6,12 +6,12 @@
     <title>Add Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-6">
+<body class="bg-gray-100 p-28 ">
 
     <div class="max-w-7xl mx-auto bg-white p-6 shadow rounded">
         <h1 class="text-2xl font-bold mb-4">Add Package, Author, and Version</h1>
         
-        <
+        
         <form action="add_data.php" method="POST">
 
 

@@ -8,13 +8,13 @@
 </head>
 <body class="bg-gray-100 p-6">
      <div class="max-w-7xl mx-auto bg-white p-6 shadow rounded">
-        <h1 class="text-2xl font-bold mb-4">List of packages</h1>
+        <h1 class="text-2xl font-bold mb-4 p-6">List of packages</h1>
         
-        <a href="create.php" id="openFormBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-900">
+        <a href="create.php" id="openFormBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-900 ml-5 ">
             Add Data
         </a>
 
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto p-5">
             <table class="table-auto w-full border-collapse border border-gray-300">
                 <thead>
                     <tr class="bg-gray-200">
