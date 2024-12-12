@@ -15,6 +15,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $authorEmail = $_POST['authorEmail'];
     $versionName = $_POST['versionName'];
     $releaseDate = $_POST['releaseDate'];
+
+    
+    $sql = "INSERT INTO authors (nameAt, email) VALUES ('$authorName', '$authorEmail')";
+    if ($conn->query($sql) === TRUE) {
+        $author_id = $conn->insert_id;
+
+        $sql = "INSERT INTO packages (namePc, author_id) VALUES ('$packageName', '$author_id')";
+        if ($conn->query($sql) === TRUE) {
+            $package_id = $conn->insert_id;
+
+            $sql = "INSERT INTO versions (version_name, release_date, package_id) VALUES ('$versionName', '$releaseDate', '$package_id')";
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully!";
+            } else {
+                echo "Error inserting version: " . $conn->error;
+            }
+        } else {
+            echo "Error inserting package: " . $conn->error;
+        }
+    } else {
+        echo "Error inserting author: " . $conn->error;
+    }
+
+    header("Location: ./index.php");
+
+    $conn->close();
+
 }
 
 ?>
