@@ -6,6 +6,15 @@ $dbname = "package";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT packages.id AS package_id, packages.namePc AS package_name, authors.nameAt AS author_name, authors.email AS author_email, versions.version_name, versions.release_date 
+        FROM packages 
+        INNER JOIN authors ON packages.author_id = authors.id
+        INNER JOIN versions ON packages.id = versions.package_id";
+$result = $conn->query($sql);
 
 ?>
 <!DOCTYPE html>
