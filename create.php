@@ -9,7 +9,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $packageName = $_POST['packageName'];
+    $authorName = $_POST['authorName'];
+    $authorEmail = $_POST['authorEmail'];
+    $versionName = $_POST['versionName'];
+    $releaseDate = $_POST['releaseDate'];
+}
 
 ?>
 
