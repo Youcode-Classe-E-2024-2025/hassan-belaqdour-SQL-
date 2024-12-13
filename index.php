@@ -47,7 +47,7 @@ $result = $conn->query($sql);
                     <?php
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo "<tr class='hover:bg-gray-100'>";
+                            
                             echo "<td class='border border-gray-300 px-4 py-2 text-center'>" . $row['package_id'] . "</td>";
                             echo "<td class='border border-gray-300 px-4 py-2'>" . $row['package_name'] . "</td>";
                             echo "<td class='border border-gray-300 px-4 py-2'>" . $row['author_name'] . "</td>";
