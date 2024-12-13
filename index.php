@@ -29,7 +29,7 @@ $result = $conn->query($sql);
     <div class="max-w-7xl mx-auto bg-white p-6 shadow rounded">
         <h1 class="text-2xl font-bold mb-4">List of Packages</h1>
 
-        <a href="create.php" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mb-4 inline-block">Add Data</a>
+        <a href="create.php" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 mb-4 inline-block">Add Data</a>
 
         <div class="overflow-x-auto">
             <table class="table-auto w-full border-collapse border border-gray-300">
